@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#123c4a" />
+    <title>CityVet | Sistema de Gestión Veterinaria</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <div class="shell">
+        <aside class="sidebar" id="sidebar">
+            <a class="brand" href="#inicio" aria-label="CityVet, inicio"><span
+                    class="brand-icon">✚</span><span><strong>CITYVET</strong><small>Gestión
+                        veterinaria</small></span></a>
+            <div class="workspace"><span class="workspace-avatar">CV</span><span><b>Clínica CityVet</b><small>Chincha,
+                        Perú</small></span><span class="workspace-check">⌄</span></div>
+            <div class="side-label">PRINCIPAL</div>
+            <nav id="nav" aria-label="Navegación principal">
+                <button class="nav-item active" data-view="inicio"><span>▦</span> Panel general</button>
+                <button class="nav-item" data-view="clientes"><span>♙</span> Clientes</button>
+                <button class="nav-item" data-view="mascotas"><span>♧</span> Mascotas</button>
+                <button class="nav-item" data-view="citas"><span>▤</span> Citas y reservas</button>
+                <button class="nav-item" data-view="historial"><span>♡</span> Historial clínico</button>
+            </nav>
+            <div class="sidebar-bottom">
+                <div class="help-badge">✧</div><strong>Todo en un solo lugar</strong>
+                <p>Controla pacientes, propietarios y sus atenciones.</p><span>Prototipo académico · v1.0</span>
+            </div>
+        </aside>
+        <div class="main-area">
+            <header class="topbar">
+                <div class="topbar-left"><button class="mobile-menu" id="menuBtn"
+                        aria-label="Abrir menú">☰</button><span class="breadcrumb">CityVet <span>/</span> <b
+                            id="currentSection">Panel general</b></span></div>
+                <div class="topbar-right"><span class="live-badge"><i></i> Prototipo demostrativo</span>
+                    <div class="profile"><span class="profile-avatar">AD</span>
+                        <div><b>Administrador</b><small>Vista de demostración</small></div>
+                    </div>
+                </div>
+            </header>
+            <main id="mainContent" class="content" tabindex="-1"></main>
+        </div>
+    </div>
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    <dialog id="modal">
+        <form id="recordForm" class="modal-form">
+            <div class="modal-top">
+                <div>
+                    <p class="eyebrow">CITYVET · REGISTRO</p>
+                    <h2 id="modalTitle">Nuevo registro</h2>
+                </div><button type="button" class="icon-close" id="closeModal" aria-label="Cerrar">×</button>
+            </div>
+            <div id="modalFields" class="form-grid"></div>
+            <div class="modal-actions"><button type="button" class="button button-light"
+                    id="cancelModal">Cancelar</button><button type="submit" class="button button-primary">Guardar
+                    registro →</button></div>
+        </form>
+    </dialog>
+    <script src="app.js" defer></script>
+</body>
+
+</html>
